@@ -31,6 +31,21 @@ buttons.forEach(function (button) {
     }
     
   });
+
+#Another Way is
+
+const buttons = document.querySelectorAll(".button");
+// console.log(buttons);
+
+const body = document.querySelector("body");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        if (button.id === e.target.id) {
+            body.style.backgroundColor = `${e.target.id}`
+        };
+    });
+});
 });
 
 
